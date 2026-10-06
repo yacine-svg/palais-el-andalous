@@ -18,7 +18,7 @@ apple-touch-icon.png  iPhone home screen icon (180 × 180)
 icon-512.png          large icon (512 × 512)
 ```
 
-Sections: hero, the hall and its amenities, 360° tour, availability calendar, 3 packages, "Composez votre mariage" configurator with a live total, gallery with filters and a lightbox, testimonials, visit request form, practical info with FAQ, and the footer.
+Sections: hero (with the next free wedding dates), the hall and its amenities, 360° tour, availability calendar, 3 packages, "Composez votre mariage" configurator with a live total, gallery with filters and a lightbox, testimonials, visit request form, practical info with FAQ, and the footer.
 
 ## Deploy on Vercel
 
@@ -39,7 +39,7 @@ Almost everything is in one object called `DATA`, near the top of the `<script>`
 | Google Maps link | `DATA.mapQuery` (the text searched on Google Maps) |
 | Instagram, Facebook, TikTok | `DATA.social` |
 | **Booked dates** | `DATA.bookedDates`: a list of `"YYYY-MM-DD"` dates |
-| High season | `DATA.peak`: `months` (1–12), `weekdays` (0 = Sunday … 6 = Saturday) and `supplement` (0.10 = +10 % on the package) |
+| High season | `DATA.peak`: `months` (1–12), `weekdays` (0 = Sunday … 6 = Saturday) and `supplement` (0.10 = +10 % on the package). The `weekdays` are also the wedding days listed under "Prochaines dates libres" in the hero |
 | How far ahead the calendar goes | `DATA.monthsAhead` |
 | Guest slider | `DATA.guests`: `min`, `max`, `step`, `default` |
 | **Packages and prices** | `DATA.packages`: `price` in DA, `features` (the bullet list), `includes` (option ids already included) |
@@ -64,6 +64,8 @@ The demo uses Unsplash photos as placeholders. Replace them with the hall's real
 - `w` and `h`: the photo's shape, e.g. `3, 2` for landscape or `2, 3` for portrait
 
 The first 8 photos show first; the rest appear with "Voir toutes les photos".
+
+Portrait photos (`h` bigger than `w`) take two rows in the grid. Keep roughly half portrait and half landscape. If you see a gap in the grid after changing photos, swap the order of two photos in the list.
 
 To use your own files, put them in an `images/` folder (for example `images/salle-1.jpg`, about 1600 px wide, under 400 KB). Then change the `img` helper just below `DATA` to this:
 
