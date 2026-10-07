@@ -35,7 +35,7 @@ Almost everything is in one object called `DATA`, near the top of the `<script>`
 | What | Where |
 | --- | --- |
 | Hall name, city, phone, e-mail, address | `DATA.name`, `city`, `phone`, `email`, `address` |
-| **WhatsApp number** | `DATA.whatsapp`: international format with no `+` and no spaces, e.g. `213561913869` |
+| **WhatsApp number** | `DATA.whatsapp`: international format with no `+` and no spaces, e.g. `` |
 | Google Maps link | `DATA.mapQuery` (the text searched on Google Maps) |
 | Instagram, Facebook, TikTok | `DATA.social` |
 | **Booked dates** | `DATA.bookedDates`: a list of `"YYYY-MM-DD"` dates |
